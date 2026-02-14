@@ -33,23 +33,6 @@ Los datos del mundo real (RWD) pueden generarse a partir de datos reportados por
 1. Dashboard Investigador
 2. Acceso Profesional de la salud para dar input o diagnósticos
 
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
 # **INFORME TÉCNICO-CIENTÍFICO: JUSTIFICACIÓN METODOLÓGICA PARA EL DISEÑO DE HERRAMIENTA DIGITAL EN ESTUDIO DE EVIDENCIA DEL MUNDO REAL (RWE) SOBRE HIPERSENSIBILIDAD DENTINAL**
 
 **1. INTRODUCCIÓN**
@@ -81,7 +64,7 @@ El diseño de la aplicación propuesta no es arbitrario; obedece a la necesidad 
 
 ---
 
-**REFERENCIAS BIBLIOGRÁFICAS (FORMATO VANCOUVER)**
+**REFERENCIAS BIBLIOGRÁFICAS**
 
 1. Chodankar D. Introduction to real-world evidence studies. Perspect Clin Res. 2021;12(3):171-174. [Fuente: PCR-12-171.pdf]
 2. Bassel M, Sayegh L, Fernandes S, Saragoussi D. Protocol Design in Real-World Evidence: The Indispensable Link Between Strategic Need and Study Execution. The Evidence Forum. 2019;Fall:11-16. [Fuente: 06-Protocol-Design-in-Real-World-Evidence_Fall2019_updated_12-2019.pdf]
@@ -89,3 +72,17 @@ El diseño de la aplicación propuesta no es arbitrario; obedece a la necesidad 
 4. Jang JH, Oh S, Kim HJ, Kim DS. A randomized clinical trial for comparing the efficacy of desensitizing toothpastes on the relief of dentin hypersensitivity. Sci Rep. 2023;13:7523. [Fuente: s41598-023-31616-6.pdf]
 5. Acharya AB, Surve SM, Thakur SL. A clinical study of the effect of calcium sodium phosphosilicate on dentin hypersensitivity. J Clin Exp Dent. 2013;5(1):e18-22. [Fuente: jced-5-e18.pdf]
 6. European Medicines Agency (EMA), Heads of Medicines Agencies (HMA). Real-world evidence provided by EMA: Support for regulatory decision-making. EMA/152628/2024. 2024 April 10. [Fuente: guide-real-world-evidence-provided-ema-support-regulatory-decision-making_en.pdf]
+
+
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
