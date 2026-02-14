@@ -1,8 +1,11 @@
 import { Outlet, useLocation, Link } from 'react-router-dom';
-import { Activity, BookOpen, User, Menu, X, LogOut, Phone } from 'lucide-react';
+import { Activity, BookOpen, User, Menu, X, LogOut, Phone, Users, Stethoscope, BarChart3, FlaskConical } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 export default function Layout() {
     const location = useLocation();
+    const { userProfile } = useAuth();
+    const role = userProfile?.role || 'patient';
 
     // Helper to check active path
     const isActive = (path) => {
@@ -11,19 +14,46 @@ export default function Layout() {
         return false;
     };
 
-    const navItems = [
+    // Role-based navigation items
+    const patientNavItems = [
         { path: '/dashboard', icon: Activity, label: 'Mi Sensibilidad' },
         { path: '/dashboard/learn', icon: BookOpen, label: 'Aprendizaje' },
         { path: '/dashboard/contact', icon: Phone, label: 'Experto' },
         { path: '/dashboard/profile', icon: User, label: 'Usuario' },
     ];
 
+    const dentistNavItems = [
+        { path: '/dashboard', icon: Users, label: 'Pacientes' },
+        { path: '/dashboard/profile', icon: User, label: 'Usuario' },
+    ];
+
+    const researcherNavItems = [
+        { path: '/dashboard', icon: BarChart3, label: 'Datos' },
+        { path: '/dashboard/profile', icon: User, label: 'Usuario' },
+    ];
+
+    const navItemsMap = { dentist: dentistNavItems, researcher: researcherNavItems };
+    const navItems = navItemsMap[role] || patientNavItems;
+
+    // Title and subtitle based on role
+    const roleConfig = {
+        dentist: { title: 'DentalSens - Odontólogo', subtitle: 'Portal Profesional', icon: Stethoscope },
+        researcher: { title: 'DentalSens - Investigador', subtitle: 'Portal de Investigación', icon: FlaskConical },
+    };
+    const appTitle = roleConfig[role]?.title || 'DentalSens-RWE';
+    const roleInfo = roleConfig[role];
+
     return (
         <div className="min-h-screen bg-clinical-gray flex flex-col md:flex-row">
             {/* Desktop Sidebar */}
             <nav className="hidden md:flex flex-col w-64 bg-white border-r shadow-sm fixed h-full z-20">
                 <div className="p-6">
-                    <h1 className="text-xl font-bold text-clinical-blue">DentalSens-RWE</h1>
+                    <h1 className="text-xl font-bold text-clinical-blue">{appTitle}</h1>
+                    {roleInfo && (
+                        <p className="text-xs text-gray-400 mt-1 flex items-center gap-1">
+                            <roleInfo.icon size={12} /> {roleInfo.subtitle}
+                        </p>
+                    )}
                 </div>
                 <div className="px-4 space-y-2">
                     {navItems.map(item => (
