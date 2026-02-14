@@ -1,4 +1,4 @@
-# 🦷 DentalSens-RWE: Estudio de Evidencia del Mundo Real sobre Hipersensibilidad Dentinal
+# 🦷 DentalSens-RWE: Estudio de Evidencia del Mundo Real sobre Hipersensibilidad Dentinal V.1.2
 
 Bienvenido al repositorio oficial de **DentalSens-RWE**, una aplicación web progresiva (PWA) diseñada para la recolección de Datos del Mundo Real (RWD) sobre la hipersensibilidad dentinal (HD) en Colombia.
 
@@ -29,6 +29,9 @@ Los datos del mundo real (RWD) pueden generarse a partir de datos reportados por
 6. **Modulo de Aprendizaje:** Segmento enfocado a enseñar sobre la condición y como manejarlo.
 7. **Sección Experto:** Contacta a un Experto. Resuelve tus dudas con nuestro personal de salud.
 
+# Cambios en V.1.2
+1. Dashboard Investigador
+2. Acceso Profesional de la salud para dar input o diagnósticos
 
 # React + Vite
 
